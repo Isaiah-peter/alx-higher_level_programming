@@ -8,4 +8,3 @@ if number > 0:
     print(f"{number} is positive")
 if number == 0:
     print(f"{number} is zero")
-

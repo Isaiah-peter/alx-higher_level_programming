@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-exec('import subprocess; subprocess.call(["echo", "#pythoniscool"])')
+def say_word:
+  return "#pythoniscool"
 
+say_word()

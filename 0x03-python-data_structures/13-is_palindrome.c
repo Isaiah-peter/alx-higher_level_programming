@@ -1,18 +1,53 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <Python.h>
-
+#include "lists.h"
 /**
- * print_python_list_info - prints some info about python lists
- * @p: points to pyobject
- * Return: void
+ * reverse_list - reverse a linked list
+ * @head: points to list
+ * Return: addy of new head
  */
-void print_python_list_info(PyObject *p)
+listint_t *reverse_list(listint_t **head)
 {
-	int i;
+	listint_t *prev = NULL, *next;
 
-	printf("[*] Size of the Python List = %lu\n", Py_SIZE(p));
-	printf("[*] Allocated = %lu\n", ((PyListObject *)p)->allocated);
-	for (i = 0; i < Py_SIZE(p); i++)
-		printf("Element %d: %s\n", i, Py_TYPE(PyList_GetItem(p, i))->tp_name);
+	while (*head != NULL)
+	{
+		next = (*head)->next;
+		(*head)->next = prev;
+		prev = *head;
+		*head = next;
+	}
+
+	*head = prev;
+	return (*head);
+}
+/**
+ * is_palindrome - tests if sll is a palindrome
+ * @head: points to list
+ * Return: 1 if palindrome, 0 if not
+ */
+int is_palindrome(listint_t **head)
+{
+	listint_t *tortoise = *head, *hare = *head, *one, *two;
+
+	if (!(head && *head) || (*head)->next == NULL)
+		return (1);
+	while (hare != NULL && hare->next != NULL)
+	{
+		hare = hare->next->next;
+		one = tortoise;
+		tortoise = tortoise->next;
+	}
+
+	tortoise = reverse_list(&tortoise);
+	two = tortoise;
+	hare = *head;
+	while (hare && tortoise)
+	{
+		if (hare->n != tortoise->n)
+			return (0);
+		hare = hare->next;
+		tortoise = tortoise->next;
+	}
+	tortoise = reverse_list(&two);
+	one->next = tortoise;
+	return (1);
 }

@@ -7,4 +7,3 @@ def uniq_add(my_list=[]):
             answer += x
         extra.append(x)
     return answer
-

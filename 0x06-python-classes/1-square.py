@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """A Square Class with private attribute"""
 
 

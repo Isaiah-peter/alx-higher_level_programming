@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Node class"""
 
+
 class Node:
     """Represents a node in a singly linked list
     Attributes:

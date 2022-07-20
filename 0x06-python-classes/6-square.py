@@ -1,45 +1,69 @@
 #!/usr/bin/python3
-"""A Square Class with private attribute
- and validations and method with a setter"""
+"""Defines a class Square"""
 
 
 class Square:
-    """A class that have a private attribute size and
-    calculate the area and also change value with setter"""
-    def __init__(self, size=0):
-        try:
-            if size >= 0:
-                self.__size = size
-        except ValueError:
-            raise ValueError("size must be >= 0")
-        except TypeError:
-            raise TypeError("size must be an integer")
+    """Represents a square
+    Attributes:
+        __size (int): size of a size of the square
+        __position (tuple): position of the square in 2D space
+    """
+    def __init__(self, size=0, position=(0, 0)):
+        """initializes the square
+        Args:
+            size (int): size of a side of the square
+            position (tuple): positoin of the square in 2D space
+        Returns:
+            None
+        """
+        self.size = size
+        self.position = position
 
     def area(self):
-        return self.__size * self.__size
+        """calculates the square's area
+        Returns:
+            The area of the square
+        """
+        return (self.__size) ** 2
 
     @property
     def size(self):
+        """getter of __size
+        Returns:
+            The size of the square
+        """
         return self.__size
 
     @size.setter
     def size(self, value):
-        try:
-            if value >= 0:
-                self.__size = value
-        except ValueError:
-            raise ValueError("size must be >= 0")
-        except TypeError:
+        """setter of __size
+        Args:
+            value (int): size of a side of the square
+        Returns:
+            None
+        """
+        if type(value) is not int:
             raise TypeError("size must be an integer")
-    
+        else:
+            if value < 0:
+                raise ValueError("size must be >= 0")
+            else:
+                self.__size = value
+
     def my_print(self):
-        if self.__size is 0:
+        """prints the square
+        Returns:
+            None
+        """
+        if self.__size == 0:
             print()
-        for i in range(0, self.__size):
-            for _ in range(0, self.__size):
-                print("#", end="")
+            return
+        for i in range(self.__position[1]):
             print()
-            
+        for j in range(self.__size):
+            print("".join([" " for k in range(self.__position[0])]), end="")
+            print("".join(["#" for l in range(self.__size)]))
+
     @property
     def position(self):
         """getter of __position
@@ -47,7 +71,7 @@ class Square:
             The position of the square in 2D space
         """
         return self.__position
-    
+
     @position.setter
     def position(self, value):
         """setter of __position

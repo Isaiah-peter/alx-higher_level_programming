@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """A Rectangle Class"""
 
+
 class Rectangle:
     """
     Rectangle class with instance method width
@@ -25,32 +26,27 @@ class Rectangle:
         return (self.__height + self.__width) * 2
 
     @property
-
     def height(self):
         return self.__height
 
     @height.setter
-
-    def height(self, height):
-        if type(height) != int:
+    def height(self, value):
+        if type(value) != int:
             raise TypeError("height must be an integer")
-        elif height < 0:
+        elif value < 0:
             raise ValueError("height must be >= 0")
         else:
-            self.__height = height
+            self.__height = value
 
     @property
-
     def width(self):
         return self.__width
 
     @width.setter
-
-    def width(self, width):
-        if type(width) != int:
+    def width(self, value):
+        if type(value) != int:
             raise TypeError("width must be an integer")
-        elif width < 0:
+        elif value < 0:
             raise TypeError("width must be >= 0")
         else:
-            self.__width = width
-
+            self.__width = value

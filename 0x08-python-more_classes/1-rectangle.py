@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """A Rectangle Class"""
 
+
 class Rectangle:
     """
     Rectangle class with instance method width

@@ -3,6 +3,5 @@
 
 
 def write_file(filename="", text=""):
-    string = str(text)
-    with open(filename, 'r+', encoding="utf-8") as f:
-        return f.write(string)
+    with open(filename, 'w', encoding="utf-8") as f:
+        return f.write(text)

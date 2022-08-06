@@ -30,5 +30,6 @@ class Student:
         for key in json:
             try:
                 setattr(self, key, json[key])
+                """seter"""
             except:
                 pass

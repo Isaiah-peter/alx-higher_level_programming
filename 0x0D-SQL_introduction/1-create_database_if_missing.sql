@@ -1,3 +1,5 @@
 -- create table hbtn_0c_0
 
-CREATE TABLE [IF NOT EXISTS] hbtn_0c_0;
+CREATE TABLE IF NOT EXISTS hbtn_0c_0(
+  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY
+);

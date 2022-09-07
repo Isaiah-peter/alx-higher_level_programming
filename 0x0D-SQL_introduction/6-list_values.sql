@@ -1,4 +1,3 @@
 -- select all rows
 
-SET @db
-SELECT * FROM `@db`.first_table;
+SELECT * FROM first_table;

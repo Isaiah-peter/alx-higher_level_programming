@@ -23,32 +23,13 @@ class Rectangle {
     console.log(m);
   }
   double () {
-    let m = '';
-    for (let i = 0; i < this.height * 2; i++) {
-      for (let j = 0; j < this.width * 2; j++) {
-        m += 'X';
-      }
-
-      if (i !== this.height - 1) {
-        m += '\n';
-      }
-    }
-
-    console.log(m);
+    this.height *= 2
+    this.width *= 2
   }
   rotate () {
-    let m = '';
-    for (let i = 0; i < this.width; i++) {
-      for (let j = 0; j < this.height; j++) {
-        m += 'X';
-      }
-
-      if (i !== this.height - 1) {
-        m += '\n';
-      }
-    }
-
-    console.log(m);
+    let temp = this.height
+    this.height = this.width
+    this.width = temp
   } 
 }
 

@@ -6,8 +6,8 @@ const argv = process.argv;
 
 let str = '';
 
-for(let i = 0; i < argv[2]; i++) {
-  for(let j = 0; j < argv[2]; j++) {
+for (let i = 0; i < argv[2]; i++) {
+  for (let j = 0; j < argv[2]; j++) {
     str += 'X';
   }
 

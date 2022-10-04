@@ -4,14 +4,14 @@ const process = require('process');
 
 const argv = process.argv;
 
-let num = 1
+let num = 1;
 
 if (argv[2] !== undefined) {
-  for(let i = 0; i < argv[2]; i++) {
-    number *= i
+  for (let i = 1; i <= Number(argv[2]); i++) {
+    num *= i;
   }
-  
-  console.log(num)
+
+  console.log(num);
 } else {
-  console.log(1)
+  console.log(1);
 }

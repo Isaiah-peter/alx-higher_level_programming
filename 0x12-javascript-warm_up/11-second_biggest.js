@@ -4,19 +4,19 @@ const process = require('process');
 
 const argv = process.argv;
 
-let lagest = argv[2]
-let sec = argv[3]
+let lagest = Number(argv[2]);
+let sec = Number(argv[3]);
 
-for(let i of argv) {
-  if (i > lagest) {
-    lagest = i
+for (const i of argv) {
+  if (Number(i) > lagest) {
+    lagest = Number(i);
   }
 }
 
-for(let i of argv) {
-  if (i > sec && sec < lagest) {
-    sec = i
+for (const i of argv) {
+  if (Number(i) > sec && i < lagest) {
+    sec = Number(i);
   }
 }
 
-return sec
+console.log(sec);

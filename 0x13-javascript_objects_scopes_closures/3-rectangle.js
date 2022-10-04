@@ -15,7 +15,7 @@ class Rectangle {
         m += 'X';
       }
 
-      if(i != this.height-1) {
+      if(i !== this.height-1) {
         m += '\n'
       }
     }

@@ -4,14 +4,20 @@ const process = require('process');
 
 const argv = process.argv;
 
-let num = 1;
-
-if (argv[2] !== undefined) {
-  for (let i = 1; i <= Number(argv[2]); i++) {
-    num *= i;
+function factorial(n) {
+  if (n == NaN) {
+    console.log(1);
+    return;
   }
 
-  console.log(num);
-} else {
-  console.log(1);
+  if (n == 1) {
+    return 1
+  } else if (n == 2) {
+    return 2
+  } else {
+    return factorial(n+1) * factorial(n+2)
+  }
+
 }
+
+console.log(factorial(argv[2]))

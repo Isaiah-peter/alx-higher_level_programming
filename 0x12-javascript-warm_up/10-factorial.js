@@ -12,4 +12,8 @@ function factorial (n) {
   return n * factorial(n - 1);
 }
 
-console.log(factorial(argv[2]));
+if (argv.length === 2) {
+  console.log(1)
+} else {
+  console.log(factorial(argv[2]));
+}

@@ -12,8 +12,8 @@ class Square extends Rectangle {
       c = 'X';
     }
     let m = '';
-    for (let i = 0; i < this.size; i++) {
-      for (let j = 0; j < this.size; j++) {
+    for (let i = 0; i < this.width; i++) {
+      for (let j = 0; j < this.height; j++) {
         m += c;
       }
       if (i !== this.height - 1) {

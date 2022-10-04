@@ -7,13 +7,12 @@ class Square extends Rectangle {
     super(size, size)
   }
 
-  charPrint(c='X') {
+  charPrint (c='X') {
     let m = '';
     for (let i = 0; i < this.size; i++) {
       for (let j = 0; j < this.size; j++) {
         m += c;
       }
-
       if (i !== this.height - 1) {
         m += '\n';
       }

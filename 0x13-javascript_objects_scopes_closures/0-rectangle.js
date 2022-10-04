@@ -1,5 +1,5 @@
 #!/usr/bin/node
 
-exports.Rectangle = class {
+var Rectangle = class {
   constructor () {}
 };

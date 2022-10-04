@@ -4,9 +4,12 @@ const myObject = {
   value: 12
 };
 console.log(myObject);
-Object.defineProperty(myObject, "incr", function () {
+Object.defineProperties(myObject, {
+  incr() {
   myObject.value += 1
+  }
 })
+
 myObject.incr();
 console.log(myObject);
 myObject.incr();

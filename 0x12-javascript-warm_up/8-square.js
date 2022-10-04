@@ -11,7 +11,7 @@ for (let i = 0; i < Number(argv[2]); i++) {
     str += 'X';
   }
 
-  if (i != Number(argv[2]) - 1){
+  if (i !== Number(argv[2]) - 1){
     str += '\n';
   }
 }

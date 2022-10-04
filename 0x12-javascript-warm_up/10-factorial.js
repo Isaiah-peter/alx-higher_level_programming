@@ -15,7 +15,7 @@ function factorial(n) {
     return 2
   }
 
-  return factorial(n+1) * factorial(n+2)
+  return factorial(n-1) * factorial(n-2)
 }
 
 console.log(factorial(argv[2]))

@@ -6,12 +6,14 @@ const argv = process.argv;
 
 let str = '';
 
-for (let i = 0; i < argv[2]; i++) {
-  for (let j = 0; j < argv[2]; j++) {
+for (let i = 0; i < Number(argv[2]); i++) {
+  for (let j = 0; j < Number(argv[2]); j++) {
     str += 'X';
   }
 
-  str += '\n';
+  if (i != Number(argv[2]) - 1){
+    str += '\n';
+  }
 }
 
 console.log(str);

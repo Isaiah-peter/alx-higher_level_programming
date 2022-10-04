@@ -20,7 +20,7 @@ for (const i of argv) {
 }
 
 if (argv.length < 4) {
-  return 0
+  sec = 0
 }
 
 console.log(sec);

@@ -2,8 +2,8 @@
 
 class Rectangle {
   constructor () {
-    return '[Class: Rectangle]'
+    return '[Class: Rectangle]';
   }
 };
 
-module.exports = { Rectangle }
+module.exports = { Rectangle };

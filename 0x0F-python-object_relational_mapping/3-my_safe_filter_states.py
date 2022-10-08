@@ -3,15 +3,17 @@
 import MySQLdb
 from sys import argv
 
-db = MySQLdb.connect(host="localhost", port=3306, user=argv[1], passwd=argv[2], db=argv[3])
+db = MySQLdb.connect(host="localhost", port=3306,
+                     user=argv[1], passwd=argv[2], db=argv[3], charset="utf8")
 
 cur = db.cursor()
-cur.execute("SELECT id, name FROM states WHERE name =%(name)s", {"name":argv[4]})
+cur.execute("SELECT id, name FROM states WHERE name =%(name)s",
+            {"name": argv[4]})
 
 rows = cur.fetchall()
 
 for row in rows:
-    print (f"{row}")
+    print(f"{row}")
 
 
 cur.close()

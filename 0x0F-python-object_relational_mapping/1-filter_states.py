@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+fetch all state stating from N
+"""
 
 import MySQLdb
 from sys import argv

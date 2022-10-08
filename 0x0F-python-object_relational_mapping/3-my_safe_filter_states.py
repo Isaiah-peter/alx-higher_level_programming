@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+avoid SQL Injection Python: Attack Example
+"""
 
 import MySQLdb
 from sys import argv

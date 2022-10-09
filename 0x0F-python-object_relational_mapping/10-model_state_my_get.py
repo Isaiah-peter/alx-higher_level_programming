@@ -17,8 +17,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
 
     session = Session()
-    row = session.query(State.id, State.name).filter(State.name.is_("%s".format("Texas")))
+    row = session.query(State.id , State.name).filter(State.name == argv[4]).first()
     if row is None:
         print("Not found")
     else:
-        print(f"{row}")
+        print(f"{row.id}")

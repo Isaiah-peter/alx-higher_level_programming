@@ -20,6 +20,6 @@ if __name__ == "__main__":
 
     row = session.query(State.id, State.name).first()
     if row is None:
-        print()
+        print("")
     else:
         print(f"{row.id}: {row.name}")

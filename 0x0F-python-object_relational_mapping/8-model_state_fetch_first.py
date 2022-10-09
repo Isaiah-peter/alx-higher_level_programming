@@ -19,6 +19,7 @@ if __name__ == "__main__":
     session = Session()
 
     row = session.query(State.id, State.name).first()
-    print(f"{row.id}: {row.name}")
     if row is None:
         print()
+    else:
+        print(f"{row.id}: {row.name}")

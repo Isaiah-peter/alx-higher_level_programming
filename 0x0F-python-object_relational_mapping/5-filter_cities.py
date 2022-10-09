@@ -28,5 +28,5 @@ if __name__ == '__main__':
 
         count += 1
 
-if count == 0:
-    print("\n")
+    if count == 0:
+        print("\n")

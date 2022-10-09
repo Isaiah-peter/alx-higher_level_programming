@@ -27,3 +27,6 @@ if __name__ == '__main__':
             print(f"{rows[count][0]}")
 
         count += 1
+
+if count == 0:
+    print("\n")

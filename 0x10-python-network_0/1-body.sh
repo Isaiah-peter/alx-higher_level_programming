@@ -1,3 +1,3 @@
 #!/bin/bash
 #get body
-echo $(curl -s $1)
+echo $(curl $1 -s)

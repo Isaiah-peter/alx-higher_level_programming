@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" python script that takes in a
+"""Python script that takes in a
 URL and an email, sends aPOST request the passed URL with
 """
 import urllib.request

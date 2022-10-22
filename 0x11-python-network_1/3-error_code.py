@@ -6,9 +6,8 @@ from urllib.error import HTTPError
 from urllib.request import urlopen
 from sys import argv
 
-url = argv[1]
-
 if __name__ == "__main__":
+    url = argv[1]
     try:
         with urlopen(url) as respond:
             body = respond.read()

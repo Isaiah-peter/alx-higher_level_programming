@@ -10,6 +10,6 @@ if __name__ == "__main__":
         data = {"q": ""}
     r = requests.post("http://0.0.0.0:5000/search_user", params=data)
     if r != None:
-        print(f"[{r.id}] {r.name}")
+        print(f"[{r.json().get('id')}] {r.json().get('name')}")
     else:
         print("No result")

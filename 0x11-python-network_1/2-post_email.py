@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-"""
-ython script that takes in a
-URL and an email, sends aPOST request to
-the passed URL with
+""" python script that takes in a
+URL and an email, sends aPOST request the passed URL with
 the email as a parameter, and displays
 the body of the respons
 """

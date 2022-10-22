@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""A Python script that Handling Error"""
+"""A Python script that fetches https://alx-intranet.hbtn.io/status
+and returns X-request-id
+"""
 from urllib.error import HTTPError
 from urllib.request import urlopen
 from sys import argv

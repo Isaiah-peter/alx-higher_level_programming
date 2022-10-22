@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""A Python script that takes in a
-URL and an email, sends aPOST request the passed URL with
+"""A Python script that fetches https://alx-intranet.hbtn.io/status
+and returns X-request-id
 """
 import urllib.request
 import urllib.parse

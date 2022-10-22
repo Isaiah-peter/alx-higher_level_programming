@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ sends a post request to the URL and displays the body
 """
-from urllib.error import HTTPError
 import requests
 from sys import argv
 

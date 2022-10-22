@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Handling Error"""
+"""A Python script that Handling Error"""
 from urllib.error import HTTPError
 from urllib.request import urlopen
 from sys import argv

@@ -6,13 +6,11 @@ from sys import argv
 if __name__ == "__main__":
     repo_name = argv[1]
     owner = argv[2]
-
+    num = 0
     r = requests.get(
-        "https://api.github.com/repos/{}/{}/commits".format(owner, repo_name),
-        params={
-            "per_page": 10,
-        }
-        )
+        "https://api.github.com/repos/{}/{}/commits".format(owner, repo_name))
     for i in r.json():
-        print("{}: {}\
+        if num < 10:
+            print("{}: {}\
             ".format(i.get('sha'), i.get('commit').get('author').get('name')))
+        num += 1

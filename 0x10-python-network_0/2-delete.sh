@@ -1,3 +1,3 @@
 #!/bin/bash
 #delete body
-echo $(curl $1 -s -X DELETE)
+curl $1 -Ls -X DELETE

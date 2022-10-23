@@ -8,7 +8,7 @@ if __name__ == "__main__":
         data = {"q": argv[1]}
     else:
         data = {"q": ""}
-    r = requests.post("http://0.0.0.0:5000/search_user", params=data)
+    r = requests.get("http://0.0.0.0:5000/search_user", params=data)
     if r != None:
         print(f"[{r.json().get('id')}] {r.json().get('name')}")
     else:

@@ -4,12 +4,14 @@ import requests
 from sys import argv
 
 if __name__ == "__main__":
-    if argv[1] != None:
-        data = {"q": argv[1]}
-    else:
-        data = {"q": ""}
-    r = requests.get("http://0.0.0.0:5000/search_user", params=data)
-    if r != None:
-        print(f"[{r.json().get('id')}] {r.json().get('name')}")
-    else:
-        print("No result")
+    url = "http://0.0.0.0:5000/search_user"
+    data = {"q": argv[1][0] if len(argv) > 1 else ""}
+    response = requests.post(url, data=data)
+    try:
+        first = response.json()
+        if not first:
+            print("No result")
+        else:
+            print("[{}] {}".format(first.get("id"), first.get("name")))
+    except ValueError:
+        print("Not a valid JSON")

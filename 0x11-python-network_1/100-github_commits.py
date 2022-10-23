@@ -12,5 +12,5 @@ if __name__ == "__main__":
     for i in r.json():
         if num < 10:
             print("{}: {}\
-            ".format(i.get('sha'), i.get('commit').get('author').get('name')))
+            ".format(i.get("sha"), i.get("commit").get("author").get("name")))
         num += 1

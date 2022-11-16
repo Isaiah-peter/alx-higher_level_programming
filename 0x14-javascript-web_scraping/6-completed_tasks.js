@@ -7,13 +7,13 @@ request(process.argv[2], function (error, response, body) {
   if (body) {
     const result = JSON.parse(body);
     result.forEach((i) => {
-      if (count[i["userId"]]) {
+      if (count[i.userId]) {
         if (i.completed === true) {
-          count[i["userId"]] = count[i["userId"]] + 1;
+          count[i.userId] = count[i.userId] + 1;
         }
       } else {
         if (i.completed === true) {
-          count[i["userId"]] = 1;
+          count[i.userId] = 1;
         }
       }
     });

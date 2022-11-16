@@ -7,7 +7,7 @@ request(process.argv[2], function (error, response, body) {
   if (body) {
     let result = JSON.parse(body).results;
 
-    for (i of result) {
+    for (let i of result) {
       if (i.characters.includes("https://swapi-api.hbtn.io/api/people/18/")) {
         count++
       }

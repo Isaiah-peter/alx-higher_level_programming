@@ -1,14 +1,8 @@
-#!/usr/env/node
-
-const process = require('process');
+#!/usr/bin/node
+// make a GET request and print the status code
 const request = require('request');
-
-const argv = process.argv;
-
-request(argv[2], function (error, res) {
-  if (!error) {
-    console.log(res.statusCode);
-  } else {
-    console.log(res.statusCode);
-  }
+request(process.argv[2], function (error, response, body) {
+  error && console.log(error);
+  response && console.log('code:', response.statusCode);
 });
+

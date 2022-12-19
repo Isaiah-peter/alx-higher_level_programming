@@ -1,0 +1,25 @@
+``7-base_geometry``module
+===================
+
+using ``7-base_geometry``
+-------------------
+
+first import function from module:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Test: is BaseGeometry of class BaseGeometry?:
+    >>> test = BaseGeometry()
+    >>> type(test) == BaseGeometry
+    True
+
+Test: is area an instance method?:
+
+	>>> type(MyList.__dict__['area'])
+	<class 'function'>
+
+Test: is integer_validator an instance method?:
+
+	>>> type(MyList.__dict__['integer_validator'])
+	<class 'function'>
+
+

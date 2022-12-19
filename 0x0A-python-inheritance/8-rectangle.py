@@ -3,10 +3,6 @@
 from base geometry
 """
 
-#!/usr/bin/python3
-"""create a new Class called BaseGeometry"""
-
-
 class BaseGeometry:
     """BaseGeometry"""
     def area(self):

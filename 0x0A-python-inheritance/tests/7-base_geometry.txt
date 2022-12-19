@@ -145,4 +145,4 @@ Test: how about a dictionary?:
 	>>> test.integer_validator("dictionary", {1, 8})
 	Traceback (most recent call last):
 	...
-	TypeError: dictionary must be an intege
+	TypeError: dictionary must be an integer
